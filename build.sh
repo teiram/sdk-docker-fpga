@@ -3,8 +3,8 @@
 ################################################################################
 # Set variables
 ################################################################################
-TAG_NAME="${TAG_NAME:=raetro/quartus}"
-GIT_TAG_NAME="${GIT_TAG_NAME:=ghcr.io/raetro/quartus}"
+TAG_NAME="${TAG_NAME:=teiram/quartus}"
+GIT_TAG_NAME="${GIT_TAG_NAME:=ghcr.io/teiram/quartus}"
 VERSION=
 BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 INTEL_CDN=https://downloads.intel.com/akdlm/software/acdsinst
@@ -167,9 +167,10 @@ publish_to_github() {
     	tag_variation "${GIT_TAG_NAME}" "pocket"
     elif [ "${VERSION}" = "21.1" ]; then
     	tag_variation "${GIT_TAG_NAME}" "21.1.1"
-	elif [ "${VERSION}" = "22.1" ]; then
+    elif [ "${VERSION}" = "22.1" ]; then
     	tag_variation "${GIT_TAG_NAME}" "22.1.1"
-	elif [ "${VERSION}" = "23.1" ]; then
+    	tag_variation "${GIT_TAG_NAME}" "calypso"
+    elif [ "${VERSION}" = "23.1" ]; then
     	tag_variation "${GIT_TAG_NAME}" "23.1"
     fi
 	echo "Done."
