@@ -170,7 +170,8 @@ publish_to_github() {
     	tag_variation "${GIT_TAG_NAME}" "calypso"
     elif [ "${VERSION}" = "22.1" ]; then
     	tag_variation "${GIT_TAG_NAME}" "22.1.1"
-	elif [ "${VERSION}" = "23.1" ]; then
+    	tag_variation "${GIT_TAG_NAME}" "calypso"
+    elif [ "${VERSION}" = "23.1" ]; then
     	tag_variation "${GIT_TAG_NAME}" "23.1"
     fi
 	echo "Done."
